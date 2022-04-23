@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>HTML Forms</title>
+    
+</head>
+<body>
+    <header>
+        <h1>Demo Form</h1>
+    </header>
+    <main>
+        <form action="/" method="GET" >
+            <section>
+                <h2>Personal info</h2>
+                <ul>
+                    <li>
+                        <label for="">Your name</label>
+                        <input type="text" name="user-name" id="user-name" value="Albert" required placeholder="Albert*"/>
+                    </li>
+                    <li>
+                        <label for="useremail">Your email adress</label>
+                        <input type="email" name="email" id="useremail" required>
+                    </li>
+                    <li>
+                        <label for="userpassword">password</label>
+                        <input type="password" name="user-password" id="userpassword" required minlength="4">
+                </ul>
+            </section>
+            <section>
+                <h2>Personal information</h2>
+
+                <ul>
+                    <li>
+                        <label for=userage>Your age</label>
+                        <input type="number" step="0.1" name="user-age" id="userage" required min="18" max="100">
+                    </li>
+                    <li>
+                        <label for="Date">Date</label>
+                        <input type="date" name="date" id="date" required min="1921-01-01" max="2003-01-01">
+                    </li>
+                    <li>
+                        <label for="color">Your favorite color?</label>
+                        <select name="clr" id="color">
+                            <option value="Blue">Blue</option>
+                            <option value="Black">Black</option>
+                            <option value="Green">Green</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <label for="usermessege">Your messege</label>
+                <textarea name="messege" id="usermessege" cols="30" rows="10"></textarea>
+                <hr>
+            </section>
+            <section>
+                <h2>Send me</h2>
+                <ul>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="SMS">
+                        <label for="SMS/">SMS</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="MMS" >
+                        <label for="MMS">MMS</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="Viber">
+                        <label for="Viber">Viber</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="checkbox" id="phone" name="terms" value="phone">
+                        <label for="phone">phone</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="checkbox" id="email" name="terms" value="email">
+                        <label for="email">email</label>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+    </main>
+</body>
+</html>
